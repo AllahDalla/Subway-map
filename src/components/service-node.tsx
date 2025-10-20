@@ -54,13 +54,13 @@ export const ServiceNode = memo(({ data }: NodeProps) => {
           className="flex h-8 w-8 items-center justify-center rounded-full"
           style={{ backgroundColor: config.color, color: "white" }}
         >
-          {config.icon}
+          {/* {config.icon} */}
         </div>
         <div className="flex flex-col">
           <div className="text-sm font-semibold text-foreground">{nodeData.label}</div>
-          <div className="text-xs font-medium capitalize" style={{ color: config.color }}>
+          {/* <div className="text-xs font-medium capitalize" style={{ color: config.color }}>
             {nodeData.status}
-          </div>
+          </div> */}
         </div>
       </div>
       <Handle type="source" position={Position.Right} className="!bg-border" />
