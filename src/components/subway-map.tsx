@@ -346,7 +346,7 @@ export function SubwayMap() {
     <div className="relative h-full w-full">
       <div className="absolute left-6 top-6 z-10 flex flex-col gap-3">
         <div className="rounded-lg border border-border bg-card/95 p-4 shadow-lg backdrop-blur-sm">
-          <h1 className="text-balance text-xl font-semibold text-foreground">WMAP Mag 7 — Subway Map</h1>
+          <h1 className="text-balance text-xl font-semibold text-foreground">Integrated Platform — Subway Map</h1>
           <p className="mt-1 text-sm text-muted-foreground">Service topology monitoring</p>
         </div>
         <Button onClick={randomizeStatuses} variant="outline" className="w-full bg-transparent">

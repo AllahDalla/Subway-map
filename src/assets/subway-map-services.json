@@ -1,0 +1,769 @@
+{
+    "domains": {
+        "account": {
+            "api": [
+                "api-account-aviso",
+                "api-account-scotiacap",
+                "api-account-jef",
+                "api-account-communify",
+                "api-account-wedbush",
+                "api-account-tdca",
+                "api-account-regmod",
+                "api-account-bfs",
+                "api-account-socgen",
+                "api-account-rbc",
+                "api-account-clone1",
+                "api-account-jpm",
+                "api-account-edjus",
+                "api-account-dataphile",
+                "api-account-clone2"
+            ],
+            "inbound-ds": [
+                "ds-account-inbound-bfs",
+                "ds-account-inbound-communify",
+                "ds-account-inbound-scotiabank",
+                "ds-account-inbound-scotiacap",
+                "ds-account-inbound-socgen",
+                "ds-account-inbound-clone1",
+                "ds-account-inbound-clone2",
+                "ds-account-inbound-dataphile",
+                "ds-account-inbound-democa",
+                "ds-account-inbound-edjus",
+                "ds-account-inbound-rbc",
+                "ds-account-inbound-regmod",
+                "ds-account-inbound-wedbush"
+            ],
+            "outbound-ds": [
+                "ds-account-outbound-communify",
+                "ds-account-outbound-aviso",
+                "ds-account-outbound-scotiabank",
+                "ds-account-outbound-jef",
+                "ds-account-outbound-clone2",
+                "ds-account-outbound-bfs",
+                "ds-account-outbound-tdca",
+                "ds-account-outbound-rayjames",
+                "ds-account-outbound-democa",
+                "ds-account-outbound-wfs",
+                "ds-account-outbound-dataphile",
+                "ds-account-outbound-rbc",
+                "ds-account-outbound-jpm",
+                "ds-account-outbound-edjus",
+                "ds-account-outbound-clone1",
+                "ds-account-outbound-wedbush"
+            ],
+            "dataloader": [
+                "api-account-event-aviso",
+                "api-account-event-scotiabank",
+                "api-account-event-clone2",
+                "api-account-event-wfs",
+                "api-account-event-wedbush",
+                "api-account-event-tdca",
+                "api-account-event-jef",
+                "api-account-event-communify",
+                "api-account-event-socgen",
+                "api-account-event-regmod",
+                "api-account-event-clone1",
+                "api-account-event-rbc",
+                "api-account-event-jpm",
+                "api-account-event-bfs",
+                "api-account-event-scotiacap"
+            ],
+            "confluent": [
+                "aviso.events.party-account.account.0",
+                "edjus.events.party-account.party.0",
+                "bfs.events.party-account.account.0",
+                "bfs.commands.party-account.account.0",
+                "bfs.commands.party-account.party.0",
+                "clone2.events.party-account.account.0",
+                "clone2.events.party-account.party.0",
+                "clone2.commands.party-account.account.0",
+                "bfs.exceptions.party-account.party.0",
+                "rayjames.exceptions.party-account.account.0",
+                "clone1.events.party-account.account.0",
+                "clone1.commands.party-account.account.0",
+                "clone1.commands.party-account.party.0",
+                "clone1.events.party-account.party.0",
+                "bfs.events.party-account.party.0",
+                "clone1.notifications.party-account.party.0",
+                "clone2.exceptions.party-account.party.0",
+                "dataphile.events.party-account.account.0",
+                "edjus.exceptions.party-account.party.0",
+                "dataphile.commands.party-account.account.0",
+                "scotiacap.exceptions.party-account.party.0",
+                "dataphile.commands.party-account.party.0"
+            ],
+            "mq": [
+                "br.account.events.local.bfs.0",
+                "br.account.events.local.dphr.0",
+                "br.account.commands.local.bfs.0",
+                "br.account.commands.local.bfs.0",
+                "br.account.commands.local.bfs.0.bo",
+                "br.account.commands.local.clone1r.0",
+                "br.account.commands.local.clone2r.0",
+                "br.account.events.local.bfs.0.bo"
+            ]
+        },
+        "balance": {
+            "api": [
+                "api-balance-aviso",
+                "api-balance-democa",
+                "api-balance-marex",
+                "api-balance-clone2",
+                "api-balance-bfs",
+                "api-balance-tdca",
+                "api-balance-rbc",
+                "api-balance-edjtst",
+                "api-balance-demous",
+                "api-balance-wedbush",
+                "api-balance-dataphile",
+                "api-balance-jpm",
+                "api-balance-jef",
+                "api-balance-communify",
+                "api-balance-clone1",
+                "api-balance-wfs"
+            ],
+            "outbound-ds": [
+                "ds-balance-outbound"
+            ],
+            "dataloader": [
+                "api-balance-event-clone1",
+                "api-balance-event-edjtst",
+                "api-balance-event-rayjames",
+                "api-balance-event-demous",
+                "api-balance-event-democa",
+                "api-balance-event-clone2",
+                "api-balance-event-tdca",
+                "api-balance-event-rbc",
+                "api-balance-event-jef",
+                "api-balance-event-aviso",
+                "api-balance-event-communify",
+                "api-balance-event-marex",
+                "api-balance-event-jpm",
+                "api-balance-event-bfs",
+                "api-balance-event-wfs"
+            ],
+            "confluent": [
+                "bfs.events.balance.balance.0",
+                "bfs.exceptions.balance.balance.0",
+                "aviso.events.balance.balance.0",
+                "rbc.events.balance.balance.0",
+                "rbc.exceptions.balance.balance.0",
+                "wedbush.events.balance.balance.0",
+                "tdca.exceptions.balance.balance.0",
+                "communify.events.balance.balance.0",
+                "clone2.exceptions.balance.balance.0",
+                "jpm.exceptions.balance.balance.0",
+                "jef.events.balance.balance.0",
+                "taglo.events.balance.balance.0",
+                "tabps.events.balance.balance.0",
+                "wfs.exceptions.balance.balance.0",
+                "taimp.events.balance.balance.0",
+                "taimp.exceptions.balance.balance.0",
+                "demous.exceptions.balance.balance.0",
+                "wedbush.exceptions.balance.balance.0",
+                "rayjames.events.balance.balance.0",
+                "wfs.notifications.balance.balance.0",
+                "democa.events.balance.balance.0",
+                "rbc.notifications.balance.balance.0"
+            ],
+            "mq": [
+                "br.balance.events.local.clone1r.0",
+                "br.balance.events.local.clone2r.0",
+                "br.balance.events.local.dphr.0",
+                "br.balance.events.local.jefr.0",
+                "br.balance.commands.local.bfs.0",
+                "br.balance.commands.local.bfs.0.bo",
+                "br.balance.events.local.bfs.0",
+                "br.balance.events.local.wfsr.0",
+                "br.balance.events.local.bfs.0.bo"
+            ]
+        },
+        "fxrate": {
+            "api": [
+                "api-marketdata-rates-demous",
+                "api-marketdata-rates-tdca",
+                "api-marketdata-rates-wedbush"
+            ],
+            "inbound-ds": [
+                "ds-marketdata-rates-inbound"
+            ],
+            "outbound-ds": [
+                "ds-marketdata-rates-outbound"
+            ],
+            "dataloader": [
+                "api-marketdata-rates-event-bfs",
+                "api-marketdata-rates-event-tdca",
+                "api-marketdata-rates-event-wedbush"
+            ],
+            "confluent": [
+                "bfs.events.fxrate.fxrate.0",
+                "tdca.events.fxrate.fxrate.0",
+                "tdca.exceptions.fxrate.fxrate.0",
+                "wedbush.events.fxrate.fxrate.0",
+                "marex.commands.fxrate.fxrate.0",
+                "tdca.commands.fxrate.fxrate.0",
+                "wedbush.commands.fxrate.fxrate.0"
+            ],
+            "msk": [
+                "sis.cdc.db2.pcbert.rate.events"
+            ]
+        },
+        "instrument": {
+            "api": [
+                "api-instrument"
+            ],
+            "inbound-ds": [
+                "ds-instrument-inbound"
+            ],
+            "outbound-ds": [
+                "ds-instrument-outbound"
+            ],
+            "dataloader": [
+                "api-instrument-event",
+                "api-instrument-event-bfs"
+            ],
+            "confluent": [
+                "tdca.exceptions.instrument.instrument.0",
+                "global.exceptions.instrument.instrument.0",
+                "dataphile.events.instrument.instrument.0",
+                "wfs.commands.instrument.instrument.0",
+                "aviso.events.instrument.instrument.0",
+                "communify.commands.instrument.instrument.0",
+                "jef.events.instrument.instrument.0",
+                "demous.exceptions.instrument.instrument.0",
+                "global.commands.instrument.instrument.0",
+                "marex.commands.instrument.instrument.0",
+                "tdca.commands.instrument.instrument.0",
+                "rbc.commands.instrument.instrument.0",
+                "taast.events.instrument.instrument.0",
+                "jef.exceptions.instrument.instrument.0",
+                "democa.commands.instrument.instrument.0",
+                "clone2.commands.instrument.instrument.0",
+                "aviso.exceptions.instrument.instrument.0",
+                "apex.events.instrument.instrument.0",
+                "dataphile.notifications.instrument.instrument.0",
+                "wedbush.exceptions.instrument.instrument.0",
+                "aviso.notifications.instrument.instrument.0",
+                "rayjames.events.instrument.instrument.0"
+            ],
+            "msk": [
+                "br.instrument.bims-events.demous.0",
+                "br.instrument.commands.global.bims.0",
+                "br.instrument.events.dataphile.dataphile.0",
+                "br.instrument.eod.tdca.0"
+            ]
+        },
+        "moneymovement": {
+            "api": [
+                "api-moneymovement-clone1",
+                "api-moneymovement-demous",
+                "api-moneymovement-edjtst",
+                "api-moneymovement-marex",
+                "api-moneymovement-wfs",
+                "api-moneymovement-democa",
+                "api-moneymovement-edjus",
+                "api-moneymovement-jef",
+                "api-moneymovement-jpm",
+                "api-moneymovement-wedbush"
+            ],
+            "inbound-ds": [
+                "ds-moneymovement-inbound"
+            ],
+            "outbound-ds": [
+                "ds-moneymovement-outbound"
+            ],
+            "dataloader": [
+                "api-moneymovement-event-marex",
+                "api-moneymovement-event-scotiacap",
+                "api-moneymovement-event-wedbush",
+                "api-moneymovement-event-wfs",
+                "api-moneymovement-event-clone1",
+                "api-moneymovement-event-edjtst",
+                "api-moneymovement-event-jpm",
+                "api-moneymovement-event-democa",
+                "api-moneymovement-event-demous",
+                "api-moneymovement-event-edjus",
+                "api-moneymovement-event-jef"
+            ],
+            "confluent": [
+                "marex.exceptions.transaction.moneymovement.0",
+                "demous.events.transaction.moneymovement.0",
+                "jef.exceptions.transaction.moneymovement.0",
+                "edjus.events.transaction.moneymovement.0",
+                "demous.commands.transaction.moneymovement.0",
+                "wfs.exceptions.transaction.moneymovement.0",
+                "edjus.exceptions.transaction.moneymovement.0",
+                "jef.events.transaction.moneymovement.0",
+                "edjtst.exceptions.transaction.moneymovement.0",
+                "wedbush.exceptions.transaction.moneymovement.0",
+                "edjus.commands.transaction.moneymovement.0",
+                "tabps.events.transaction.moneymovement.0",
+                "wfs.commands.transaction.moneymovement.0",
+                "clone1.events.transaction.moneymovement.0",
+                "taimp.events.transaction.moneymovement.0",
+                "democa.commands.transaction.moneymovement.0",
+                "clone1.exceptions.transaction.moneymovement.0",
+                "wedbush.commands.transaction.moneymovement.0",
+                "jpm.events.transaction.moneymovement.0",
+                "taglo.events.transaction.moneymovement.0",
+                "regmod.commands.transaction.moneymovement.0",
+                "jef.commands.transaction.moneymovement.0"
+            ],
+            "mq": [
+                "br.moneymovement.commands.local.clone2r.0",
+                "br.moneymovement.events.local.bfs.0.bo",
+                "br.moneymovement.commands.local.bfs.0",
+                "br.moneymovement.events.local.wfsr.0",
+                "br.moneymovement.commands.local.bfs.0.bo",
+                "br.moneymovement.commands.local.clone1r.0",
+                "br.moneymovement.events.local.clone2r.0",
+                "br.moneymovement.events.local.clone1r.0",
+                "br.moneymovement.commands.local.bfs.0",
+                "br.moneymovement.events.local.jefr.0",
+                "br.moneymovement.commands.local.demousr.0",
+                "br.moneymovement.events.local.dphr.0",
+                "br.moneymovement.events.local.demousr.0",
+                "br.moneymovement.events.local.bfs.0"
+            ]
+        },
+        "party": {
+            "api": [
+                "api-party-preferences",
+                "api-party-wedbush",
+                "api-party-edjus",
+                "api-party-preferences-regmod",
+                "api-party-jpm",
+                "api-party-democa",
+                "api-party-communify",
+                "api-party-bfs",
+                "api-party-wfs",
+                "api-party-regmod",
+                "api-party-rayjames",
+                "api-party-dataphile",
+                "api-party-clone2",
+                "api-party-tdca",
+                "api-party-socgen"
+            ],
+            "inbound-ds": [
+                "ds-party-inbound-bfs",
+                "ds-party-inbound-clone1",
+                "ds-party-inbound-dataphile",
+                "ds-party-inbound-democa",
+                "ds-party-inbound-edjus",
+                "ds-party-inbound-rbc",
+                "ds-party-inbound-regmod",
+                "ds-party-inbound-scotiabank",
+                "ds-party-inbound-clone2",
+                "ds-party-inbound-communify",
+                "ds-party-inbound-scotiacap",
+                "ds-party-inbound-socgen",
+                "ds-party-inbound-wedbush"
+            ],
+            "outbound-ds": [
+                "ds-party-outbound-clone2",
+                "ds-party-outbound-rbc",
+                "ds-party-outbound-democa",
+                "ds-party-outbound-rayjames",
+                "ds-party-outbound-jpm",
+                "ds-party-outbound-aviso",
+                "ds-party-outbound-wfs",
+                "ds-party-outbound-tdca",
+                "ds-party-outbound-scotiabank",
+                "ds-party-outbound-dataphile",
+                "ds-party-outbound-communify",
+                "ds-party-outbound-clone1",
+                "ds-party-outbound-bfs",
+                "ds-party-outbound-wedbush",
+                "ds-party-outbound-socgen"
+            ],
+            "dataloader": [
+                "api-party-event-clone2",
+                "api-party-event-jpm",
+                "api-party-event-wedbush",
+                "api-party-event-jef",
+                "api-party-event-bfs",
+                "api-party-event-socgen",
+                "api-party-event-scotiacap",
+                "api-party-event-scotiabank",
+                "api-party-event-rbc",
+                "api-party-event-edjus",
+                "api-party-event-dataphile",
+                "api-party-event-communify",
+                "api-party-event-clone1",
+                "api-party-event-aviso",
+                "api-party-event-tdca"
+            ],
+            "confluent": [
+                "aviso.events.party-account.account.0",
+                "edjus.events.party-account.party.0",
+                "bfs.events.party-account.account.0",
+                "bfs.commands.party-account.account.0",
+                "bfs.commands.party-account.party.0",
+                "clone2.events.party-account.account.0",
+                "clone2.events.party-account.party.0",
+                "clone2.commands.party-account.account.0",
+                "bfs.exceptions.party-account.party.0",
+                "rayjames.exceptions.party-account.account.0",
+                "clone1.events.party-account.account.0",
+                "clone1.commands.party-account.account.0",
+                "clone1.commands.party-account.party.0",
+                "clone1.events.party-account.party.0",
+                "bfs.events.party-account.party.0",
+                "clone1.notifications.party-account.party.0",
+                "clone2.exceptions.party-account.party.0",
+                "dataphile.events.party-account.account.0",
+                "edjus.exceptions.party-account.party.0",
+                "dataphile.commands.party-account.account.0",
+                "scotiacap.exceptions.party-account.party.0",
+                "dataphile.commands.party-account.party.0"
+            ],
+            "mq": [
+                "br.party.events.local.bfs.0",
+                "br.party.events.local.bfs.0.bo",
+                "br.party.commands.local.bfs.0",
+                "br.party.commands.local.bfs.0",
+                "br.party.commands.local.bfs.0.bo",
+                "br.party.commands.local.clone1r.0",
+                "br.party.commands.local.clone2r.0"
+            ]
+        },
+        "price": {
+            "api": [
+                "api-marketdata-prices-tdca",
+                "api-marketdata-prices-wedbush"
+            ],
+            "inbound-ds": [
+                "ds-marketdata-prices-inbound"
+            ],
+            "outbound-ds": [
+                "ds-marketdata-prices-outbound"
+            ],
+            "dataloader": [
+                "api-marketdata-prices-event-bfs",
+                "api-marketdata-prices-event-tdca",
+                "api-marketdata-prices-event-wedbush"
+            ],
+            "confluent": [
+                "bfs.events.price.price.0",
+                "marex.exceptions.price.price.0",
+                "tdca.events.price.price.0",
+                "tdca.commands.price.price.0",
+                "marex.commands.price.price.0",
+                "wedbush.commands.price.price.0",
+                "demous.events.price.price.0",
+                "regmod.commands.price.price.0",
+                "apex.notifications.price.price.0",
+                "jef.events.price.price.0",
+                "regmod.exceptions.price.price.0",
+                "aviso.commands.price.price.0",
+                "marex.events.price.price.0",
+                "wfs.events.price.price.0",
+                "apex.commands.price.price.0",
+                "dataphile.events.price.price.0",
+                "regmod.events.price.price.0",
+                "tdca.exceptions.price.price.0",
+                "apex.exceptions.price.price.0",
+                "democa.events.price.price.0",
+                "apex.events.price.price.0",
+                "wedbush.events.price.price.0"
+            ],
+            "msk": [
+                "sis.cdc.db2.fipric.price.events"
+            ]
+        },
+        "positions": {
+            "api": [
+                "api-position-regmod",
+                "api-position-marex",
+                "api-position-tdca",
+                "api-position-jpm",
+                "api-position-dataphile",
+                "api-position-clone1",
+                "api-position-wedbush",
+                "api-position-socgen",
+                "api-position-rayjames",
+                "api-position-jef",
+                "api-position-wfs",
+                "api-position-edjtst",
+                "api-position-clone2",
+                "api-position-bfs",
+                "api-position-demous",
+                "api-position-democa"
+            ],
+            "outbound-ds": [
+                "ds-position-outbound"
+            ],
+            "dataloader": [
+                "api-position-event-demous",
+                "api-position-event-bfs",
+                "api-position-event-clone1",
+                "api-position-event-wfs",
+                "api-position-event-regmod",
+                "api-position-event-rbc",
+                "api-position-event-jef",
+                "api-position-event-democa",
+                "api-position-event-dataphile",
+                "api-position-event-wedbush",
+                "api-position-event-edjtst",
+                "api-position-event-marex",
+                "api-position-event-communify",
+                "api-position-event-aviso",
+                "api-position-event-tdca"
+            ],
+            "confluent": [
+                "bfs.events.position.position.2",
+                "rbc.events.position.position.0",
+                "bfs.events.position.position.0",
+                "rayjames.events.position.position.0",
+                "rbc.exceptions.position.position.0",
+                "wedbush.events.position.position.0",
+                "communify.events.position.position.0",
+                "jpm.exceptions.position.position.0",
+                "barclays.exceptions.position.position.0",
+                "apex.exceptions.position.position.0",
+                "clone1.exceptions.position.position.0",
+                "jef.exceptions.position.position.0",
+                "barclays.events.position.position.0",
+                "dataphile.exceptions.position.position.0",
+                "tabps.exceptions.position.position.0",
+                "wfs.commands.position.position.0",
+                "jpm.events.position.position.0",
+                "communify.notifications.position.position.0",
+                "wedbush.exceptions.position.position.0",
+                "rbc.notifications.position.position.0",
+                "wedbush.notifications.position.position.0",
+                "democa.commands.position.position.0"
+            ],
+            "mq": [
+                "br.position.commands.local.bfs.0.bo",
+                "br.position.events.local.dphr.0",
+                "br.position.events.local.jefr.0",
+                "br.position.commands.local.bfs.0",
+                "br.position.events.local.bfs.0",
+                "br.position.events.local.bfs.0.bo",
+                "br.position.events.local.clone1r.0",
+                "br.position.events.local.clone2r.0",
+                "br.position.events.local.wfsr.0"
+            ]
+        },
+        "transfer": {
+            "api": [
+                "api-transfer-clone1",
+                "api-transfer-democa",
+                "api-transfer-demous",
+                "api-transfer-edjus",
+                "api-transfer-jef",
+                "api-transfer-jpm",
+                "api-transfer-questrade",
+                "api-transfer-scotiabank",
+                "api-transfer-edjtst",
+                "api-transfer-marex",
+                "api-transfer-scotiacap",
+                "api-transfer-wedbush",
+                "api-transfer-wfs"
+            ],
+            "inbound-ds": [
+                "ds-transfer-inbound"
+            ],
+            "outbound-ds": [
+                "ds-transfer-outbound"
+            ],
+            "dataloader": [
+                "ds-transfer-outbound-bfs",
+                "ds-transfer-outbound"
+            ],
+            "confluent": [
+                "wedbush.events.transaction.transfer.0",
+                "jpm.exceptions.transaction.transfer.0",
+                "jef.exceptions.transaction.transfer.0",
+                "demous.exceptions.transaction.transfer.0",
+                "demous.commands.transaction.transfer.0",
+                "marex.exceptions.transaction.transfer.0",
+                "demous.notifications.transaction.transfer.0",
+                "taimp.exceptions.transaction.transfer.0",
+                "wedbush.notifications.transaction.transfer.0",
+                "wedbush.commands.transaction.transfer.0",
+                "questrade.events.transaction.transfer.0",
+                "scotiabank.events.transaction.transfer.0",
+                "scotiacap.notifications.transaction.transfer.0",
+                "scotiacap.exceptions.transaction.transfer.0",
+                "questrade.notifications.transaction.transfer.0",
+                "edjus.exceptions.transaction.transfer.0",
+                "taglo.exceptions.transaction.transfer.0",
+                "edjus.events.transaction.transfer.0",
+                "taglo.events.transaction.transfer.0",
+                "scotiabank.exceptions.transaction.transfer.0",
+                "taimp.events.transaction.transfer.0",
+                "scotiacap.events.transaction.transfer.0"
+            ],
+            "mq": [
+                "br.transfer.events.local.jefr.0",
+                "br.transfer.commands.local.bfs.0",
+                "br.transfer.events.local.bfs.0",
+                "br.transfer.events.local.democar.0",
+                "br.transfer.events.local.dphr.0",
+                "br.transfer.events.local.wfsr.0",
+                "br.transfer.commands.local.bfs.0",
+                "br.transfer.commands.local.bfs.0.bo",
+                "br.transfer.commands.local.clone1r.0",
+                "br.transfer.commands.local.clone2r.0",
+                "br.transfer.events.local.bfs.0.bo",
+                "br.transfer.events.local.clone1r.0"
+            ]
+        },
+        "transactiontrades": {
+            "api": [
+                "api-transaction-trades"
+            ],
+            "inbound-ds": [
+                "ds-transaction-trades-inbound"
+            ],
+            "outbound-ds": [
+                "ds-transaction-trades-outbound"
+            ],
+            "dataloader": [
+                "api-transaction-trades-event-marex",
+                "api-transaction-trades-event-regmod",
+                "api-transaction-trades-event-aviso",
+                "api-transaction-trades-event-clone1",
+                "api-transaction-trades-event-dataphile",
+                "api-transaction-trades-event-jef",
+                "api-transaction-trades-event-tdca",
+                "api-transaction-trades-event-wedbush",
+                "api-transaction-trades-event-wfs",
+                "api-transaction-trades-event-clone2",
+                "api-transaction-trades-event-communify",
+                "api-transaction-trades-event-jpm"
+            ],
+            "confluent": [
+                "bfs.commands.transaction.trade.0",
+                "bfs.events.transaction.trade.0",
+                "dataphile.exceptions.transaction.trade.0",
+                "wedbush.notifications.transaction.trade.0",
+                "aviso.events.transaction.trade.0",
+                "bfs.exceptions.transaction.trade.0",
+                "marex.exceptions.transaction.trade.0",
+                "jef.exceptions.transaction.trade.0",
+                "tabps.events.transaction.trade.0",
+                "wfs.exceptions.transaction.trade.0",
+                "tabps.commands.transaction.trade.0",
+                "taimp.events.transaction.trade.0",
+                "tdca.events.transaction.trade.0",
+                "rayjames.events.transaction.trade.0",
+                "questrade.events.transaction.transfer.0",
+                "tdca.commands.transaction.trade.0",
+                "questrade.notifications.transaction.transfer.0",
+                "taglo.exceptions.transaction.trade.0",
+                "tdca.notifications.transaction.trade.0",
+                "communify.notifications.transaction.trade.0",
+                "wedbush.events.transaction.trade.0",
+                "democa.commands.transaction.trade.0"
+            ],
+            "mq": [
+                "br.transaction.trades.events.local.jefr.0",
+                "br.transaction.trades.events.local.dphr.0",
+                "br.transaction.trades.commands.local.jefr.0",
+                "br.transaction.trades.events.local.wfsr.0",
+                "br.transaction.trades.commands.local.bfs.0",
+                "br.transaction.trades.commands.local.bfs.0.bo",
+                "br.transaction.trades.commands.local.clone1r.0",
+                "br.transaction.trades.commands.local.wfsr.0",
+                "br.transaction.trades.events.local.bfs.0",
+                "br.transaction.trades.events.local.bfs.0.bo",
+                "br.transaction.trades.events.local.clone2r.0",
+                "br.transaction.trades.commands.local.bfs.0",
+                "br.transaction.trades.commands.local.clone2r.0",
+                "br.transaction.trades.events.local.clone1r.0"
+            ]
+        },
+        "settlement": {
+            "api": [
+                "api-settlement-obligations"
+            ],
+            "inbound-ds": [
+                "ds-settlement-confirmations-inbound"
+            ],
+            "outbound-ds": [
+                "ds-settlement-confirmations-outbound"
+            ],
+            "dataloader": [
+                "api-settlement-confirmations-event-marex",
+                "api-settlement-confirmations-event-wedbush",
+                "api-settlement-confirmations-event-barclays",
+                "api-settlement-confirmations-event-clone1",
+                "api-settlement-confirmations-event-clone2",
+                "api-settlement-confirmations-event-jpm",
+                "api-settlement-confirmations-event-wfs",
+                "api-settlement-confirmations-event-bfs",
+                "api-settlement-confirmations-event-jef"
+            ],
+            "confluent": [
+                "bfs.events.transaction.settlementobligation.0",
+                "bfs.commands.transaction.settlementconfirmation.0",
+                "bfs.events.transaction.settlementconfirmation.0",
+                "clone1.commands.transaction.settlementconfirmation.0",
+                "clone1.events.transaction.settlementconfirmation.0",
+                "jef.commands.transaction.settlementconfirmation.0",
+                "bfs.exceptions.transaction.settlementconfirmation.0",
+                "wfs.events.transaction.settlementobligation.0",
+                "bfs.exceptions.transaction.settlementobligation.0",
+                "jef.exceptions.transaction.settlementobligation.0",
+                "marex.exceptions.transaction.settlementobligation.0",
+                "jef.exceptions.transaction.settlementconfirmation.0",
+                "marex.exceptions.transaction.settlementconfirmation.0",
+                "wfs.exceptions.transaction.settlementconfirmation.0",
+                "jpm.exceptions.transaction.settlementconfirmation.0",
+                "jpm.events.transaction.settlementobligation.0",
+                "barclays.events.transaction.settlementobligation.0",
+                "wfs.events.transaction.settlementconfirmation.0",
+                "demous.events.transaction.settlementconfirmation.0",
+                "barclays.exceptions.transaction.settlementobligation.0",
+                "demous.commands.transaction.settlementconfirmation.0",
+                "jpm.events.transaction.settlementconfirmation.0"
+            ],
+            "mq": [
+                "br.settlement.obligations.events.local.bfs.0",
+                "br.settlement.obligations.events.local.bfs.0.bo"
+            ],
+            "msk": [
+                "br.settlement.obligations.events.bfs.0",
+                "br.settlement.obligations.events.barclays.0",
+                "br.settlement.obligations.events.wfs.0",
+                "br.settlement.confirmations.commands.bfs.0",
+                "br.settlement.confirmations.events.bfs.0",
+                "br.settlement.obligations.events.jef.0",
+                "br.settlement.obligations.exceptions.internal.taglo.0",
+                "br.settlement.obligations.exceptions.internal.barclays.0",
+                "br.settlement.confirmations.exceptions.internal.taglo.0",
+                "br.settlement.obligations.exceptions.internal.bfs.0",
+                "br.settlement.confirmations.commands.jef.0",
+                "br.settlement.confirmations.commands.wfs.0",
+                "br.settlement.confirmations.exceptions.global.0",
+                "br.settlement.confirmations.events.wfs.0",
+                "br.settlement.obligations.events.demous.0",
+                "br.settlement.obligations.exceptions.internal.wfs.0",
+                "br.settlement.confirmations.events.jef.0",
+                "br.settlement.obligations.events.clone1.0",
+                "br.settlement.confirmations.events.clone1.0",
+                "br.settlement.obligations.events.jpm.0",
+                "br.settlement.confirmations.events.demous.0",
+                "br.settlement.confirmations.commands.clone1.0"
+            ]
+        }
+    },
+    "postgres": [
+        "bfs",
+        "communify",
+        "scotiabank",
+        "scotiacap",
+        "socgen",
+        "clone1",
+        "clone2",
+        "dataphile",
+        "democa",
+        "edjus",
+        "rbc",
+        "regmod",
+        "wedbush"
+    ]
+}
