@@ -35,9 +35,8 @@ export const ServiceNode = memo(({ data }: NodeProps) => {
   const nodeData = data as ServiceNodeData
   const config = statusConfig[nodeData.status]
   
-  // Background = group color, Border = status color
-  const customColor = (nodeData as any).color
-  const bgColor = customColor || config.borderColor
+  // Both background and border = status color
+  const bgColor = config.borderColor
   const borderColor = config.borderColor
 
   return (
