@@ -35,35 +35,26 @@ export const ServiceNode = memo(({ data }: NodeProps) => {
   const nodeData = data as ServiceNodeData
   const config = statusConfig[nodeData.status]
   
-  // Use custom color if provided
+  // Background = group color, Border = status color
   const customColor = (nodeData as any).color
-  const borderColor = customColor || config.borderColor
-  const bgColor = customColor ? `${customColor}15` : config.bgColor
+  const bgColor = customColor || config.borderColor
+  const borderColor = config.borderColor
 
   return (
     <div
-      className="rounded-full border-2 bg-card px-4 py-3 shadow-lg transition-all duration-300"
+      className="rounded-full flex items-center justify-center shadow-lg transition-all duration-300 border-4"
       style={{
-        borderColor: borderColor,
         backgroundColor: bgColor,
+        borderColor: borderColor,
+        width: "60px",
+        height: "60px",
       }}
     >
-      <Handle type="target" position={Position.Left} className="!bg-border" />
-      <div className="flex items-center gap-2">
-        <div
-          className="flex h-8 w-8 items-center justify-center rounded-full"
-          style={{ backgroundColor: config.color, color: "white" }}
-        >
-          {/* {config.icon} */}
-        </div>
-        <div className="flex flex-col">
-          <div className="text-sm font-semibold text-foreground">{nodeData.label}</div>
-          {/* <div className="text-xs font-medium capitalize" style={{ color: config.color }}>
-            {nodeData.status}
-          </div> */}
-        </div>
+      <Handle type="target" position={Position.Left} className="!bg-gray-400" />
+      <div className="text-xl font-bold text-white">
+        {nodeData.label}
       </div>
-      <Handle type="source" position={Position.Right} className="!bg-border" />
+      <Handle type="source" position={Position.Right} className="!bg-gray-400" />
     </div>
   )
 })
