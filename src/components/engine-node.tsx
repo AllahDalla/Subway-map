@@ -2,7 +2,7 @@
 
 import { memo } from "react"
 import { Handle, Position, type NodeProps } from "@xyflow/react"
-import { Cpu } from "lucide-react"
+import { Cpu, ChartBarIncreasing } from "lucide-react"
 
 export interface EngineNodeData {
   label: string
@@ -12,6 +12,8 @@ export interface EngineNodeData {
 export const EngineNode = memo(({ data }: NodeProps) => {
   const nodeData = data as EngineNodeData
 
+  console.log("Rendering EngineNode:", nodeData)
+
   return (
     <div
       className="rounded-xl border-4 bg-card px-8 py-6 shadow-2xl transition-all duration-300"
@@ -19,7 +21,7 @@ export const EngineNode = memo(({ data }: NodeProps) => {
         borderColor: "#000000",
         backgroundColor: "rgba(255, 255, 255, 0.95)",
         minWidth: "200px",
-        minHeight: "150px",
+        minHeight: nodeData.label.includes("db") ? "150px":"250px",
       }}
     >
       <Handle
@@ -33,11 +35,11 @@ export const EngineNode = memo(({ data }: NodeProps) => {
           className="flex h-16 w-16 items-center justify-center rounded-full"
           style={{ backgroundColor: "#000000", color: "white" }}
         >
-          <Cpu className="h-8 w-8" />
+          {nodeData.label.includes("db") ? <ChartBarIncreasing className="h-8 w-8" />:<Cpu className="h-8 w-8" />}
         </div>
         <div className="flex flex-col items-center">
-          <div className="text-2xl font-bold text-foreground">{nodeData.label}</div>
-          <div className="text-sm text-muted-foreground">Engine</div>
+          <div className="text-2xl font-bold text-foreground items-center">{nodeData.label}</div>
+          <div className="text-sm text-muted-foreground justify-center items-center">{nodeData.label.includes("db") ? "Database":"Engine"}</div>
         </div>
       </div>
       <Handle

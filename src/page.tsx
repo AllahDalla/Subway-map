@@ -1,11 +1,11 @@
 "use client"
 
-import { SubwayMapReal } from "./components/subway-map-real"
+import { SubwayMap } from "./components/subway-map"
 
 export default function Page() {
   return (
     <div className="h-screen w-full bg-background">
-      <SubwayMapReal />
+      <SubwayMap />
     </div>
   )
 }
